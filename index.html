@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Maze Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Portal Maze Adventure</h1>
+            <div class="game-info">
+                <span id="level-display">Level: 1</span>
+                <span id="time-display">Time: 60s</span>
+                <span id="score-display">Score: 0</span>
+            </div>
+        </div>
+        <div id="maze-container"></div>
+        <div class="controls-info">
+            <div class="character-select">
+                <span>Character: </span>
+                <select id="character-select">
+                    <option value="normal">Normal Ball</option>
+                    <option value="jumper">Jumper Ball</option>
+                    <option value="ghost">Ghost Ball</option>
+                    <option value="speedy">Speedy Ball</option>
+                </select>
+            </div>
+            <button id="sound-toggle">🔊 Sound: ON</button>
+        </div>
+        <div class="controls-help">
+            <p>Controls: Arrow Keys / WASD / Xbox Controller</p>
+            <p>Reach the green exit portal while navigating through transport portals!</p>
+        </div>
+        <div id="powerups-container" class="powerups-container">
+            <h3>Power-ups</h3>
+            <div id="powerups-list"></div>
+        </div>
+    </div>
+    
+    <!-- Audio elements -->
+    <audio id="move-sound" src="sounds/move.mp3" preload="auto"></audio>
+    <audio id="portal-sound" src="sounds/portal.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+    <audio id="powerup-sound" src="sounds/powerup.mp3" preload="auto"></audio>
+    <audio id="background-music" src="sounds/background.mp3" loop preload="auto"></audio>
+    
+    <script src="maze.js"></script>
+</body>
+</html>
